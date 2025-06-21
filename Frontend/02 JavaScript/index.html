@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Compteur</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+
+
+ <script>
+  function incremente() {
+   let elementCompteur = document.getElementById("compteur")
+   let i = Number(elementCompteur.innerHTML)
+   i++
+   elementCompteur.innerHTML = i
+  }
+
+  function decremente() {
+   let elementCompteur = document.getElementById("compteur")
+   let i = Number(elementCompteur.innerHTML)
+   if (i > 0)
+    i--
+   elementCompteur.innerHTML = i
+  }
+
+  function reset() {
+   let elementCompteur = document.getElementById("compteur")
+   let i = Number(elementCompteur.innerHTML)
+   i = 0
+   elementCompteur.innerHTML = i
+  }
+ </script>
+</head>
+
+<body>
+
+
+ <div class="card mx-auto my-5" style="width: 18rem;">
+  <div class="card-body">
+   <h5 class="card-title">Compteur</h5>
+   <h6 class="card-subtitle mb-2 text-body-secondary" id="compteur">0</h6>
+   <p class="card-text">Compteur de zikr.
+   </p>
+   <button class="btn btn-success" onclick="incremente()">+</button>
+   <button class="btn btn-danger" onclick="decremente()">-</button>
+   <button class="btn btn-warning" onclick="reset()">Réinitialisation</button>
+  </div>
+ </div>
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+
+</html>
